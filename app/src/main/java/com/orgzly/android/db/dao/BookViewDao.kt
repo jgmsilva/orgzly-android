@@ -62,6 +62,6 @@ abstract class BookViewDao {
 
         private const val ORDER_BY_TIME = "is_dummy, MAX(COALESCE(mtime, 0), COALESCE(synced_to_mtime, 0)) DESC, name"
 
-        private const val ORDER_BY_NAME = "is_dummy, LOWER(COALESCE(books.title, name))"
+        private const val ORDER_BY_NAME = "is_dummy, LOWER(COALESCE(books.title, name)) DESC"
     }
 }
